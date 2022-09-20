@@ -7,6 +7,10 @@
 
 import UIKit
 
+/*
+  根据价格包区分给用户增加不同的体育会员视频VIP天数
+ */
+
 public protocol VipRechargeStrategy {
     func recharge(priceCode: String)
 }
@@ -39,6 +43,7 @@ public class Context {
     
     var strage: VipRechargeStrategy?
     
+    // 缺点: 这里还是没有摆脱 if else
     func payNotify(priceCode: String) {
         switch priceCode {
         case "充值一个月会员":

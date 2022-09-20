@@ -7,6 +7,7 @@
 
 import UIKit
 
+// 工厂+ 单例
 public class VipRechargeFactory {
     
     static let shared = VipRechargeFactory()
